@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+header {
+    width: 100%;
+    padding: 28px;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    padding-right: 25px;
+    font-weight: 600;
+    font-size: bolder;
+    margin-top: 0%;
+}
+
+.pp {
+    padding-bottom: 90px;
+}
+
+.classic {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin: 0 auto; /* Centraliza o elemento se o tamanho for fixo */
+}
+
+.classic img {
+    max-width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(138, 204, 204);
+    transition: all .2s;
+}
+
+.button {
+    position: absolute; /* Torna o botão posicionado absolutamente */
+    top: 20px; /* Ajusta o botão ao topo do contêiner pai */
+    right: 20px; /* Ajusta o botão ao lado direito do contêiner pai */
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: rgb(138, 204, 204);
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    transition: all 0.2s ease-in;
+}
+
+.button:hover {
+    background: rgb(61, 106, 255);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    transition: all 0.2s ease-out;
+}
+
+.button:hover::before {
+    animation: sh02 0.5s 0s linear;
+}
+
+.button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+button:active {
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow 0.2s ease-in;
+}
+
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10%;
+    font-family: Poppins, sans-serif;
+
+    & a {
+        text-decoration: none;
+        color: #04ddb2;
+        cursor: default;
+    }
+}
+
+/* Estilo para o container do iframe */
+.youtube-player {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 315px; /* Altura padrão do iframe do YouTube */
+}
+  
+/* Estilo do iframe */
+.youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: none; /* Inicialmente escondido */
+}
+  
+/* Efeito de transição do iframe */
+.youtube-player iframe.show {
+    display: block;
+    animation: fadeIn 0.5s ease-out;
+}
+  
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+p {
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+button {
+    position: absolute; /* Torna o botão posicionado absolutamente */
+    padding: 20px 30px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: rgb(138, 204, 204);
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    transition: all 0.2s ease-in;
+}
+
+button:hover {
+    background: rgb(61, 106, 255);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    transition: all 0.2s ease-out;
+}
+
+button:hover::before {
+    animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    transform: skewX(-20deg);
+}
+
+article h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10%;
+    font-family: Poppins, sans-serif;
+}
+
+.buttom-low {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.footer {
+    background-color: #ffffff;
+    padding: 80px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as seções se ajustem em diferentes linhas */
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+    min-width: 200px; /* Garante que cada seção tenha um tamanho mínimo */
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 14px;
+    color: #666666;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: #00bfa5;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    .navbar a {
+        padding-right: 15px;
+        font-size: 16px;
+    }
+
+    .title {
+        padding-top: 5%;
+    }
+
+    .youtube-player {
+        height: 200px;
+    }
+
+    .button {
+        top: 10px;
+        right: 10px;
+        padding: 8px 16px;
+    }
+
+    button {
+        padding: 15px 20px;
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .buttom-low {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .navbar a {
+        padding-right: 10px;
+        font-size: 14px;
+    }
+
+    .button {
+        top: 5px;
+        right: 5px;
+        padding: 6px 12px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 10px;
+    }
+
+    .footer {
+        padding: 40px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .footer-social a {
+        font-size: 18px;
+    }
+}
